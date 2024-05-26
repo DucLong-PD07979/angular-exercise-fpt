@@ -1,0 +1,18 @@
+.cart {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.cart img {
+  border-radius: 5px;
+}
+
+.cart-title {
+  font-weight: 600;
+}
+
+.cart-content {
+  padding-left: 50px;
+}

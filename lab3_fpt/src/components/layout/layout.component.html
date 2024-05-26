@@ -1,0 +1,41 @@
+<main class="row">
+  <router-outlet></router-outlet>
+  <app-sider-bar class="sidebar col-2"></app-sider-bar>
+  <app-content class="content col-7"></app-content>
+  <aside class="col-3">
+    <div class="d-flex align-items-center justify-content-end">
+      <div><fa-icon class="fa-xl" [icon]="faBell"></fa-icon></div>
+
+      <div class="avatar">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/todo-app-crud-e0711.appspot.com/o/ghe-sofa-4.jpg?alt=media&token=32e67feb-8443-4fdb-a853-a9d48047a900"
+          alt="Avatar"
+        />
+        Pham Van Chien
+      </div>
+      <div>
+        <fa-icon [icon]="faChevronDown"></fa-icon>
+      </div>
+    </div>
+    <div class="content-info">
+      <img
+        src="https://firebasestorage.googleapis.com/v0/b/todo-app-crud-e0711.appspot.com/o/ghe-sofa-4.jpg?alt=media&token=32e67feb-8443-4fdb-a853-a9d48047a900"
+        alt="info"
+      />
+      <h4>Project 2</h4>
+      <p class="townhouse">Apartment</p>
+      <small>2 bedrooms • 2 bathrooms • 240m2</small>
+      <p class="price">$254656.5656</p>
+      <p>
+        Follow the link below for a more detailed description. description of
+        somebody/something a brief description of the software The name means
+        ‘no trees’ and it is an accurate description of the island. Police have
+        issued a description of the gunman. This is a film that defies
+        description
+      </p>
+      <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-dark btn-detail">Detail</button>
+      </div>
+    </div>
+  </aside>
+</main>

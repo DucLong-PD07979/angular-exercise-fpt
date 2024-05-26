@@ -1,0 +1,10 @@
+<app-search (searchValue)="handleGetValueSearch($event)"></app-search>
+<div class="d-flex justify-content-between">
+  <h5>All Listings</h5>
+  <p>search value: {{ value }}</p>
+  <div>
+    <fa-icon [icon]="faFilter"></fa-icon>
+    Filter
+  </div>
+</div>
+<app-cards></app-cards>

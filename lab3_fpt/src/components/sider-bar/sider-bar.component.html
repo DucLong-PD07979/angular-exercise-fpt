@@ -1,0 +1,16 @@
+<div class="">
+  <div class="logo">
+    <img style="width: 70px" src="assets/images/logo.png" alt />
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngFor="let item of menuListData">
+      <fa-icon class="fa-lg" [icon]="item.icon"></fa-icon>
+      <a
+        routerLink="{{ item.path }}"
+        class="text-decoration-none ms-2 text-secondary-emphasis"
+        >{{ item.label }}</a
+      >
+    </li>
+  </ul>
+</div>
