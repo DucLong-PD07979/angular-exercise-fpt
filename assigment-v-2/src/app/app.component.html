@@ -1,0 +1,46 @@
+<div>
+  <div class="student">
+    <img [src]="student.anh" style="width: 200px" alt="Ảnh sinh viên" />
+    <div class="info">
+      <p><strong>Họ tên:</strong> {{ student.hoTen }}</p>
+      <p><strong>Giới tính:</strong> {{ student.gioiTinh }}</p>
+      <p><strong>Ngày sinh:</strong> {{ student.ngaySinh }}</p>
+      <p><strong>Lớp:</strong> {{ student.lop }}</p>
+    </div>
+  </div>
+</div>
+
+<h2>Hiển thị danh sách sản phẩm</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Product ID</th>
+      <th>Product Name</th>
+      <th>Product Code</th>
+      <th>Release Date</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Star Rating</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product.productId }}</td>
+      <td>{{ product.productName }}</td>
+      <td>{{ product.productCode }}</td>
+      <td>{{ product.releaseDate }}</td>
+      <td>{{ product.description }}</td>
+      <td>{{ product.price }}</td>
+      <td>{{ product.starRating }}</td>
+      <td>
+        <img
+          [src]="product.imageUrl"
+          alt="Product Image"
+          width="50"
+          height="50"
+        />
+      </td>
+    </tr>
+  </tbody>
+</table>
