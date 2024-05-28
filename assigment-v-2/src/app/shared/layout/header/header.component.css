@@ -1,0 +1,91 @@
+.header-container {
+  padding: 8px 5%;
+}
+
+.header-top-notification {
+  background-color: #373a40;
+}
+
+.header-top-notification a {
+  color: #fff;
+  margin-right: 18px;
+  font-size: 12px;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.header-top-notification a:hover {
+  text-decoration: underline;
+}
+
+.header-main-wrapper {
+  background-color: #eee;
+  border-bottom: 1px solid #686d764d;
+}
+
+.header-main-wrapper .header-container {
+  display: flex;
+  align-items: center;
+  padding-block: 0;
+  padding-right: 0;
+}
+
+.header-logo {
+  flex-shrink: 0;
+}
+.header-logo h1 a {
+  font-size: 24px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #dc5f00;
+  padding-right: 50px;
+}
+
+.header-logo h1 a:hover {
+  opacity: 0.7;
+}
+
+.header-nav-inner {
+  padding: 10px 0;
+  width: 100%;
+  background-color: #fff;
+  border-left: 1px solid #686d764d;
+}
+
+.header-nav-top {
+  padding-inline: 3%;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 1px solid #686d764d;
+}
+
+.header-nav-top form .form-group input {
+  width: 360px;
+  border: 25px;
+  outline: none;
+  font-size: 14px;
+  padding: 8px;
+}
+
+.header-nav-top .header-nav-user {
+  display: flex;
+  gap: 16px;
+}
+
+.header-nav-bottom {
+  padding-inline: 3%;
+  padding-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.header-nav-bottom button {
+  border-radius: 4px;
+  color: #686D76;
+}
+
+.header-nav-bottom button:hover{
+    background-color: inherit;
+}

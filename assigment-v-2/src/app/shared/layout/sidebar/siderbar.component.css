@@ -1,0 +1,33 @@
+.sidebar {
+  width: 100%;
+  max-width: 250px;
+  background-color: #373A40;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: calc(136px);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+:is(.sidebar-top,.sidebar-bottom) a{
+    width: 100%;
+    background-color: #fff;
+    display: block;
+    text-decoration: none;
+    text-align: left;
+    padding: 8px;
+    border-radius: 4px;
+    color: #373A40;
+    font-weight: 500;
+}
+
+:is(.sidebar-top,.sidebar-bottom) a:hover{
+    background-color: #EEEEEE;
+}
+
+.sidebar-top a + a{
+    margin-top: 10px;
+}
