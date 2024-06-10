@@ -1,0 +1,47 @@
+<div class="project-details-wrapper">
+  <div class="project-details-inner">
+    <div class="project-details-left">
+      <div *ngFor="let item of projectData; index as i">
+        <h3 class="project-details__title">Tên dự án : {{ item.name }}</h3>
+        <p>Người quản lí : {{ user.userData.name }}</p>
+        <p>Tổng chi phí : {{ item.totalCosts }}</p>
+        <p>Số task: {{ item.totalTask }}</p>
+        <p>Số task đã hoàn thành : {{ item.completed_tasks }}</p>
+        <p>Tiến trình dự án : {{ item.progress_percentage }}</p>
+        <p>Ngày bắt đầu: {{ formatDate(item.startDate) }}</p>
+        <p>Ngày kết thúc: {{ formatDate(item.endDate) }}</p>
+        <p>Mô tả dự án:</p>
+        <p>{{ item.description }}</p>
+        <div class="project-details__status">Tình trạng: {{ item.status }}</div>
+      </div>
+      <div class="project-details-handle">
+        <button mat-mini-fab>sửa</button>
+        <button mat-mini-fab (click)="deleteProject(projectData[0]._id)">
+          xóa
+        </button>
+      </div>
+      <h3 class="project-details-title">Tất cả task của dự án</h3>
+      <div class="project-details-task">
+        <mat-card
+          class="project-card"
+          *ngFor="let item of taskData; index as i"
+        >
+          <mat-card-header>
+            <mat-card-title>{{ item.name }}</mat-card-title>
+          </mat-card-header>
+
+          <mat-card-content>
+            <small>Mô tả:</small>
+            <p class="card-description">{{ item.description }}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+    <div class="project-details-right">
+      <h4>Thành viên tham gia dự án</h4>
+      <ul>
+        <li *ngFor="let item of memberList">{{ item.name }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

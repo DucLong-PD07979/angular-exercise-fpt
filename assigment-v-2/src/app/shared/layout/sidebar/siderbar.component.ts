@@ -16,8 +16,8 @@ export class SiderbarComponent {
       path: '',
     },
     {
-      label: 'Projects',
-      path: 'projects',
+      label: 'Projects of you',
+      path: 'projects-of-you',
     },
     {
       label: 'Users',

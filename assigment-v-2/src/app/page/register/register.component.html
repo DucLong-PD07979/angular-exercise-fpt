@@ -1,1 +1,22 @@
-<p>register works!</p>
+<div class="register-wrapper">
+  <form action="" [formGroup]="registerForm" id="registerForm">
+    <mat-form-field class="example-full-width">
+      <mat-label>Tên đăng nhập</mat-label>
+
+      <input matInput placeholder="Long Nguyễn" formControlName="name" />
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="van@.gmail.com" formControlName="email" />
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Password</mat-label>
+      <input matInput placeholder="*****" formControlName="password" />
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Password comfirm</mat-label>
+      <input matInput placeholder="*****" formControlName="passwordComfirm" />
+    </mat-form-field>
+    <button mat-stroked-button (click)="onRegister()">Đăng ký</button>
+  </form>
+</div>

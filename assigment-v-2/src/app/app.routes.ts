@@ -8,7 +8,10 @@ import { PageNotFoundComponent } from './page/pageNotFound/page-not-found.compon
 import { ProjectComponent } from './page/project/project.component';
 import { UsersComponent } from './page/users/users.component';
 import { EmailComponent } from './page/email/email.component';
+import { CreateProjectComponent } from './page/createProject/create-project.component';
 import AuthGuard from './core/guards/authGuard';
+import { ProjectDetailsComponent } from './page/project-details/project-details.component';
+import { CreateTaskComponent } from './page/create-task/create-task.component';
 
 export const routes: Routes = [
   {
@@ -31,8 +34,8 @@ export const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'projects',
-    title: 'Projects',
+    path: 'projects-of-you',
+    title: 'projects-of-you',
     component: ProjectComponent,
     canActivate: [AuthGuard],
   },
@@ -46,6 +49,24 @@ export const routes: Routes = [
     path: 'email',
     title: 'Email',
     component: EmailComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'create-project',
+    title: 'Create project',
+    component: CreateProjectComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'projects-of-you/:slug',
+    title: 'projects details',
+    component: ProjectDetailsComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'create-task',
+    title: 'create-task',
+    component: CreateTaskComponent,
     canActivate: [AuthGuard],
   },
   { path: '**', pathMatch: 'full', component: PageNotFoundComponent },

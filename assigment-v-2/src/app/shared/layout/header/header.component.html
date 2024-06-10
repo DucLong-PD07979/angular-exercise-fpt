@@ -1,4 +1,4 @@
-<header>
+<header id="header-main">
   <div class="header-top-notification">
     <div class="header-container">
       <a href="">giới thiệu</a>
@@ -9,7 +9,7 @@
   <div class="header-main-wrapper">
     <div class="header-container">
       <div class="header-logo">
-        <h1><a href="">Quản lí nhân sự fpt</a></h1>
+        <h1><a routerLink="">Quản lí nhân sự fpt</a></h1>
       </div>
       <div class="header-nav-inner">
         <div class="header-nav-top">
@@ -19,13 +19,26 @@
             </div>
           </form>
           <div class="header-nav-user">
-            <a href="">Login</a>
-            <a href="">register</a>
+            <a routerLink="/login" *ngIf="!user">Login</a>
+            <a routerLink="/register" *ngIf="!user">register</a>
+            <button (click)="onLogout()" *ngIf="user">Logout</button>
           </div>
         </div>
         <div class="header-nav-bottom">
-          <button mat-stroked-button>Create project</button>
-          <button mat-stroked-button>Views project</button>
+          <button
+            mat-stroked-button
+            *ngIf="getRoleUserLeader()"
+            (click)="navigateToCreateProjectPage()"
+          >
+            Create project
+          </button>
+          <button
+            mat-stroked-button
+            *ngIf="!getRoleUserLeader()"
+            (click)="navigateToCreateTask()"
+          >
+            Create task
+          </button>
         </div>
       </div>
     </div>

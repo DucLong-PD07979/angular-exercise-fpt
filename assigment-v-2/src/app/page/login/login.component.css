@@ -1,0 +1,17 @@
+
+.login-wrapper{
+    position: fixed;
+    z-index: 9999999;
+    inset: 0;
+    background-color: #EEEEEE;
+}
+
+#loginForm{
+    max-width: 400px;
+    width: 100%;
+    margin: 100px auto;
+}
+
+.example-full-width{
+    width: 100%;
+}

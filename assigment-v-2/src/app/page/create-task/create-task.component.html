@@ -1,0 +1,39 @@
+<div class="create-task-wrapper">
+  <form [formGroup]="formGroup" id="create-task-form">
+    <h2>Create task</h2>
+    <div class="create-task-grid">
+      <mat-form-field class="example-full-width">
+        <mat-label>Name task</mat-label>
+        <input formControlName="name" matInput placeholder="task 1" value="" />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Mô tả</mat-label>
+        <input
+          formControlName="description"
+          matInput
+          placeholder="Website xây dựng với mục đích..."
+        />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Deadline</mat-label>
+        <input matInput formControlName="due_date" [matDatepicker]="picker" />
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Lựa chọn dự án</mat-label>
+        <mat-select disableRipple formControlName="projectId">
+          <mat-option
+            value="{{ item._id }}"
+            *ngFor="let item of projectsData; index as i"
+            >{{ item.name }}</mat-option
+          >
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <button mat-stroked-button (click)="createTask()">Tạo task</button>
+  </form>
+</div>
